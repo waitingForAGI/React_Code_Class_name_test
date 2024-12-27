@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /*------Color variables------*/
+    --white: #ffffff;
+    --dark___2: #6e6e6e;
+    --darkslategray: #191919;
+    --orange_a700: #fd650b;
+    --gray_700: #626262;
+    --red_100: #ecd6c8;
+    --gray_50: #fff9f6;
+    --blue_gray_100: #cfcfcf;
+    --blue_gray_100_01: #d6d6d6;
+    --black_A700_01: #000000;
+    --black_600: #656d76;
+    --gray_shadow: #00000029;
+
+    /*------Shadow variables------*/
+    --shadow-xs: 0 0 13px 5px #00000029;
+
+    /*------Border radius variables------*/
+    --radius-xs: 8px;
+    --radius-sm: 10px;
+    --radius-md: 20px;
+    --radius-lg: 40px;
+
+    /*------Spacing variables------*/
+    --space-xs: 4px;
+    --space-sm: 6px;
+    --space-md: 8px;
+    --space-lg: 10px;
+    --space-xl: 12px;
+    --space-2xl: 13px;
+    --space-3xl: 14px;
+    --space-4xl: 16px;
+    --space-5xl: 22px;
+    --space-6xl: 24px;
+    --space-7xl: 30px;
+    --space-8xl: 40px;
+    --space-9xl: 42px;
+    --space-10xl: 100px;
+  }
+  [type="text"],
+  input:where(:not([type])),
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    appearance: none;
+    background-color: transparent;
+    border-color: unset;
+    border-width: 0;
+    border-radius: unset;
+    padding: unset;
+    font-size: unset;
+    line-height: unset;
+  }
+
+  /* Override default focus colors for tailwindcss-forms https://github.com/tailwindlabs/tailwindcss-forms */
+  [type="text"]:focus,
+  [type="email"]:focus,
+  [type="url"]:focus,
+  [type="password"]:focus,
+  [type="number"]:focus,
+  [type="date"]:focus,
+  [type="search"]:focus,
+  [multiple]:focus,
+  textarea:focus,
+  select:focus {
+    --tw-ring-color: transparent;
+    border-color: transparent;
+  }
+  [type="radio"]:focus,
+  [type="checkbox"]:focus {
+    --tw-ring-color: transparent;
+  }
+}
+@layer components {
+  /*-------------------------------------
+  Container CSS
+--------------------------------------*/
+  .container-xs {
+    @apply w-full mx-auto max-w-[1200px];
+  }
+}
